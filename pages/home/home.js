@@ -5,7 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    headline:'选择模式'
+    headline:'选择模式',
+    age : 18,
+    students:[
+      {age:18, name: "zhangsan", id: 1},
+      {age:18, name: "lisi", id: 1},
+      {age:18, name: "wnagwu", id: 1},
+    ],
+    counter: 0
+  },
+
+  //计数加
+  add(){
+    if (this.data.counter == 20) {  //计到20,再加则归0
+      this.setData({
+        counter: 0
+      })
+    }else{
+      this.setData({
+        counter: this.data.counter + 1
+      })
+    }
+    console.log(this.data.counter)
+  },
+  //计数减
+  minus(){
+
+    if (this.data.counter == 0) {  //不会减成负数
+      this.setData({
+        counter: 0
+      })
+    }else{
+      this.setData({
+        counter: this.data.counter - 1
+      })
+    }
+    console.log(this.data.counter)
   },
 
   /**

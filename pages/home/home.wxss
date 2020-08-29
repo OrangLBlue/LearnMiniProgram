@@ -3,3 +3,12 @@
   color: blue;
   font-size: 40px;
 }
+
+.homebutton1{
+  display: flex;
+}
+
+.countcss{
+  display: flex;
+  justify-content: center;  
+}

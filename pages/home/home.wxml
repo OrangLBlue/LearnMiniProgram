@@ -1,7 +1,19 @@
 <!--pages/home/home.wxml-->
-<text class = 'title'>{{headline}}\n\n\n</text>
+<text class = 'title' center>{{headline}}\n\n\n</text>
 <button size='mini'>组号从1到n连续的n个组</button>
 <button size='mini'> \t组号不连续的n个组\t </button>
 <button> 抽签 </button>
 
-<view>tag test2</view>
+<view>I am {{ age + 10 }} years old</view> 
+
+<!--列表显示： wx:for-->
+<view wx:for="{{students}}" >{{item.name}},{{item.age}},{{item.id}}</view>
+
+<text>\n\n</text>
+<view>
+  <text class="countcss" size='mini'>{{counter}}</text>
+</view>
+<view class="homebutton1">
+  <button  size="mini" type="warn" plain bindtap="add">+</button>
+  <button  size="mini" type="primary" plain bindtap="minus">-</button>
+</view> 
